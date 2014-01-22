@@ -32,8 +32,10 @@ class dgshController extends DopeController {
         $this->shortcode_tag = get_option('dgsh_tag', 'code');
         // change wpautop priority to execute after shortcode has been processed
         // see http://sww.co.nz/solution-to-wordpress-adding-br-and-p-tags-around-shortcodes/
-        remove_filter('the_content', 'wpautop');
-        add_filter('the_content', 'wpautop', 12);
+        if (has_filter('the_content', 'wpautop')){
+            remove_filter('the_content', 'wpautop');
+            add_filter('the_content', 'wpautop', 12);
+        }
         
         $shortcode = new dgshShortCode($this->shortcode_tag, $this->plugin);
         $shortcode->add();
