@@ -5,7 +5,7 @@
  * Depends: dope
  * Plugin URI:  http://www.baliashram.com/
  * Description: Provides <strong>Syntax-highlighting</strong> using <strong>Alex Gorbachev's SyntaxHighlighter</strong>.
- * Version:     0.1
+ * Version:     0.1.1
  * Author:      Darius Glockenmeier
  * Author URI:  http://www.baliashram.com/
  * License:     GPLv3

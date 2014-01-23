@@ -21,5 +21,6 @@
     SyntaxHighlighter.defaults['smart-tabs'] = true;
     SyntaxHighlighter.defaults['tab-size'] = <?php echo $this->tabsize ?>;
     SyntaxHighlighter.defaults['toolbar'] = <?php echo $this->toolbar ?>;
+    SyntaxHighlighter.config['stripBrs'] = <?php echo $this->strip_brs ?>;
     SyntaxHighlighter.all()
 </script>

@@ -54,6 +54,7 @@ class dgshAdminController extends DopeController {
         $section_sh->addNumberField('dgsh_tabsize', 4, 'Tab size', 'Allows you to adjust tab size.');
         $section_sh->addCheckboxField('dgsh_toolbar', false, 'Toolbar', ' Toggles toolbar on/off.');
         $section_sh->addCheckboxField("dgsh_htmlscript", false, "Html script", 'Allows you to highlight a mixture of HTML/XML code and a script which is very common in web development.');
+        $section_sh->addCheckboxField('strip_brs', false, esc_html("Strip <br />'s"), esc_html('If your software adds <br /> tags at the end of each line, this option allows you to ignore those.'));
         
         $settings->register();
     }

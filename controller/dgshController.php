@@ -85,6 +85,7 @@ class dgshController extends DopeController {
             $gutter = $opt->get('gutter', "1") !== "" ? "true" : "false";
             $toolbar = $opt->get('toolbar', "") !== "" ? "true" : "false";
             $htmlscript = $opt->get('htmlscript', "") !== "" ? "true" : "false";
+            $strip_brs = $opt->get('strip_brs', "") !== "" ? "true" : "false";
             
             $view = new SimpleDopeView($this->plugin->getDirectory());
             $view->assign('autolinks', $autolinks)
@@ -94,6 +95,7 @@ class dgshController extends DopeController {
                     ->assign('toolbar', $toolbar)
                     ->assign('htmlscript', $htmlscript)
                     ->assign('tabsize', intval($opt->get('tabsize', 4)))
+                    ->assign('strip_brs', $strip_brs)
                     ->render('run-highlighter');
         }
     }
