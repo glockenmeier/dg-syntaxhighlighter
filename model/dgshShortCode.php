@@ -43,10 +43,14 @@ class dgshShortCode extends DopeShortcode {
             return "[$this->tag] invalid brush: " . $brush;
         }
         
+        if ($content === '') {
+            // return early if there is no content
+            return '';
+        }
+        
         $htmlscript = $atts['htmlscript'] === "false" ? "" : "html-script: true;";
         $gutter = $atts['gutter'] === "true" ? "" : "gutter: false;";
         $firstline = $atts['firstline'] === "1" ? "" :  sprintf("first-line: %s;", $atts['firstline']);
-        
         
         return sprintf('<pre class="brush: %s %s %s %s">%s</pre>', 
                 strtolower($this->brush_map[$brush]), $htmlscript, $gutter,
