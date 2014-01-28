@@ -16,6 +16,7 @@ class DgSyntaxHighlighter extends DopePlugin {
 
     public function __construct($bootstrapFile) {
         parent::__construct($bootstrapFile);
+        load_plugin_textdomain( 'dg-syntaxhighlighter', false, '/dg-syntaxhighlighter/localization' );
         
         if (is_admin()) {
             new dgshAdminController($this);
